@@ -1,9 +1,20 @@
-income=int(input("Enter your income:"))
+income=float(input("Enter your income:"))
+tax=0
 if income<250000:
     print("NILL")
 elif income<500000:
-    print("Your tax:",income*0.05)
+    new=income-25000
+    tax=new*0.05
+    print("Your tax:",tax)
 elif income<1000000:
-    print("Your tax:",income*0.2)
-else:
-    print("Your tax:",income*0.3)
+    new=income-500000
+    tax=new*0.10
+    print("Your tax:",tax)
+elif income<1500000:
+    new=income-1000000
+    tax=new*0.15
+    print("Your tax:",tax)
+elif income>=1000000:
+    new=income-1500000
+    tax=new*0.20
+    print("Your tax:",tax)
